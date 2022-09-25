@@ -1,0 +1,13 @@
+<button swoot-button>
+  Click me
+</button>
+{{form.getRawValue() | json}}
+<form [formGroup]="form">
+  <div formGroupName="colors">
+    Colours
+    <div *ngFor="let color of colors">
+      <label for="color-{{color}}">{{color}}</label>
+      <input [formControlName]="color" type="color" id="color-{{color}}" />
+    </div>
+  </div>
+</form>
